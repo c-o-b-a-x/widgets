@@ -1,0 +1,294 @@
+:root {
+  --color-primary: #03045e;
+  --color-secondary: #023e8a;
+  --color-accent: #0077b6;
+  --color-accent-hover: #036397;
+  --color-headings: #0096c7;
+  --color-body: #00b4d8;
+  --icon-back: black;
+  --heading-font-size: 3em;
+  --border-radius: 5px;
+  --border-color: grey;
+}
+
+h1 {
+  color: var(--color-headings);
+  font-size: var(--heading-font-size);
+}
+
+#widget-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+  #widget-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#link-div {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "\002197";
+  margin-left: 5px;
+  transition: margin 0.5s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 100px;
+}
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+}
+.badge--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.badge--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.badge--small {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
+
+.list {
+  list-style: none;
+  color: var(--color-headings);
+}
+
+.list-tick {
+  list-style-image: url(image/tick.svg);
+  padding-left: 3rem;
+  margin-left: 2rem;
+}
+
+.horizontal-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon-container {
+  background-color: var(--icon-back);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon-div > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-primary {
+  fill: var(--color-accent);
+}
+
+.btn {
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: var(--color-accent);
+}
+.btn-secondary:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-block {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.custom-input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  color: var(--color-headings);
+  font-size: 1.25rem;
+  outline: 0;
+  padding: 0.5rem 1rem;
+}
+::placeholder {
+  color: lightgray;
+}
+
+.media {
+  display: flex;
+}
+.media_body {
+  margin: 0 2rem;
+}
+.media_image {
+  margin-top: 1rem;
+}
+.media_title {
+  margin-top: 0;
+}
+
+.quote {
+  font-size: x-large;
+  font-style: italic;
+  color: var(--color-accent);
+  line-height: 1.3em;
+}
+
+.quote_text::before {
+  content: open-quote;
+}
+.quote_text::after {
+  content: close-quote;
+}
+.quote_author {
+  font-weight: 1000;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.quote_organization {
+  color: var(--color-accent-hover);
+  opacity: 0.4;
+  font-size: 2rem;
+  font-style: normal;
+  margin-top: 0;
+}
+.quote_author::before {
+  content: "-";
+}
+
+@media screen and (max-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+  .quote_author {
+    font-size: 1.5rem;
+  }
+  .quote_organization {
+    font-size: 1.25rem;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px red;
+  overflow: hidden;
+}
+
+.card_header {
+  font-size: 2rem;
+}
+
+.card_header,
+.card_body {
+  padding: 1rem 1.5rem;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-wrapper > .card {
+  width: 33%;
+  box-sizing: border-box;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.collapsible_header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible_heading {
+  margin-top: 0;
+  font-size: 3em;
+}
+.collapsible_chevron {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.collapsible-expanded .collapsible_chevron {
+  transform: rotate(0);
+}
+
+.collapsible_content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible-expanded .collapsible_content {
+  max-height: 100vh;
+  opacity: 1;
+}
