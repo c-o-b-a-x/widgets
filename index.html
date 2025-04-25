@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="collapsible.js" defer></script>
   </head>
   <body>
     <h1>I'm a h1 - using our headings color</h1>
@@ -182,6 +183,21 @@
             <p>Hi.</p>
           </div>
         </div>
+      </div>
+      <div id="navbars">
+        <h2>Navbars</h2>
+        <nav class="nav collapsible">
+          <a class="nav_brand" href="#">logo here</a>
+          <svg class="icon icon-primary nav_toggler">
+            <use xlink:href="image/sprite.svg#menu"></use>
+          </svg>
+          <ul class="list nav_list collapsible_content">
+            <li class="nav_item"><a href="#">item 1 </a></li>
+            <li class="nav_item"><a href="#">item 2 </a></li>
+            <li class="nav_item"><a href="#">item 3 </a></li>
+            <li class="nav_item"><a href="#">item 4 </a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </body>

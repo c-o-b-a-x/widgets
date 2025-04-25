@@ -292,3 +292,45 @@ a {
   max-height: 100vh;
   opacity: 1;
 }
+
+/* nav bar*/
+
+.nav {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav_list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav_item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #6f6f6f;
+}
+
+.nav_item > a {
+  color: orange;
+  transition: color 0.3s;
+}
+
+.nav_item > a:hover {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_toggler {
+    display: none;
+  }
+  .nav_list {
+    width: auto;
+    display: flex;
+    font-size: 1.5rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+}
