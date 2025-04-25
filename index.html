@@ -8,7 +8,42 @@
     <script src="collapsible.js" defer></script>
   </head>
   <body>
+    <div id="navbars">
+      <h2>Navbars</h2>
+      <nav class="nav collapsible">
+        <a class="nav_brand" href="#">logo here</a>
+        <svg class="icon icon-primary nav_toggler">
+          <use xlink:href="image/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav_list collapsible_content">
+          <li class="nav_item"><a href="#">item 1 </a></li>
+          <li class="nav_item"><a href="#">item 2 </a></li>
+          <li class="nav_item"><a href="#">item 3 </a></li>
+          <li class="nav_item"><a href="#">item 4 </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="hero-section">
+      <section class="block block-dark block-skewed-left hero">
+        <div class="block-container grid grid-2-col">
+          <header class="block_header hero_content">
+            <h1 class="block_heading">My super fun html component Page</h1>
+            <p class="hero_tagline">
+              All the markup you need for super fun html components
+            </p>
+            <a href="#" class="btn btn-primary">Check it out!</a>
+          </header>
+          <img
+            class="hero-img"
+            src="image/einstein.avif"
+            alt=""
+            style="height: 256px"
+          />
+        </div>
+      </section>
+    </div>
     <h1>I'm a h1 - using our headings color</h1>
+
     <div id="widget-grid">
       <div id="link-div">
         <h2>Basic Link Style</h2>
@@ -109,13 +144,13 @@
       <div id="grid-div">
         <h2>More Grids</h2>
         <h3>1x3</h3>
-        <div class="grid grid-3-col">
+        <div class="grid grid-3-col grid-1x3">
           <div style="height: 100px; background: gold"></div>
           <div style="height: 100px; background: dodgerblue"></div>
           <div style="height: 100px; background: tomato"></div>
         </div>
         <h3>1x2</h3>
-        <div class="grid grid-2-col">
+        <div class="grid grid-2-col grid-1x2">
           <div style="height: 100px; background: gold"></div>
           <div style="height: 100px; background: dodgerblue"></div>
         </div>
@@ -184,20 +219,21 @@
           </div>
         </div>
       </div>
-      <div id="navbars">
-        <h2>Navbars</h2>
-        <nav class="nav collapsible">
-          <a class="nav_brand" href="#">logo here</a>
-          <svg class="icon icon-primary nav_toggler">
-            <use xlink:href="image/sprite.svg#menu"></use>
-          </svg>
-          <ul class="list nav_list collapsible_content">
-            <li class="nav_item"><a href="#">item 1 </a></li>
-            <li class="nav_item"><a href="#">item 2 </a></li>
-            <li class="nav_item"><a href="#">item 3 </a></li>
-            <li class="nav_item"><a href="#">item 4 </a></li>
-          </ul>
-        </nav>
+
+      <div id="blocks">
+        <h2>Blocks</h2>
+        <div class="block-container">
+          <section class="block block-dark block-skewed-right">
+            <header class="block_header">
+              <h2 class="block_heading">Heading</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                aperiam quis provident temporibus excepturi esse vitae hic
+                voluptatibus iusto cumque.
+              </p>
+            </header>
+          </section>
+        </div>
       </div>
     </div>
   </body>
